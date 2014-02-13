@@ -1,0 +1,40 @@
+#include<iostream>
+#include<conio.h>
+using namespace std;
+const int n = 9;
+
+void czylider(int tab[], int n)
+{
+	int lider;
+	int il ;
+	int wart;
+	int lid;
+	for (int i = 0; i < n; i++)
+	{
+		 lider = tab[i];
+		 il = 0;
+		 wart=0;
+		 lid = 0;
+		for (int j = 0 ; j < n; j++)
+		{
+			if (tab[j] == lider)il++;
+
+		}
+		if (il>wart && il > (n / 2))
+		{
+			wart = il;
+			lid = lider;
+		}
+	
+	}
+	if (wart > 0)cout << lider;
+}
+int main()
+{
+	cout << "dzialam\n";
+	int tab[n] = {2,3,4,2,4,2,2,5,2};
+	czylider(tab, n);
+
+	_getch();
+	return(0);
+}
